@@ -69,7 +69,7 @@ public class ProducerAvro {
         users.add(user);
 
         try (KafkaProducer<String, GenericRecord> producer = new KafkaProducer<String, GenericRecord>(properties)) {
-            for (int i = 0; i < 1; i++) {
+            for (int i = 0; i < users.size(); i++) {
                 GenericRecord r = users.get(i);
 
                 final ProducerRecord<String, GenericRecord> record;

@@ -12,7 +12,7 @@ This demo show how consumer and producer application connect to Kafka (MSK) usin
 You need to add file `kafka.config` in src/main/resource folder the have SASL credential to MSK. For example
 
 ```
-saslUsername=your
+saslUsername=your-user
 saslPassword=your-secret
 brokers=b-2-public.aaaa.rge7jl.c21.kafka.us-east-1.amazonaws.com:9196,b-3-public.aaaa.rge7jl.c21.kafka.us-east-1.amazonaws.com:9196,b-1-public.aaaa.rge7jl.c21.kafka.us-east-1.amazonaws.com:9196
 ```

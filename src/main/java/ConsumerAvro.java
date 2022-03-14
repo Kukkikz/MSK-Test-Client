@@ -38,7 +38,7 @@ public class ConsumerAvro {
         String grp_id = "kiktest1";
 
         Properties properties = new Properties();
-        properties.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG, "b-2-public.kik-test-cluster.rge7jl.c21.kafka.us-east-1.amazonaws.com:9196,b-3-public.kik-test-cluster.rge7jl.c21.kafka.us-east-1.amazonaws.com:9196,b-1-public.kik-test-cluster.rge7jl.c21.kafka.us-east-1.amazonaws.com:9196");
+        properties.put(CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG, kafkaSaslProp.getProperty("brokers"));
         properties.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SASL_SSL");
         properties.put(SaslConfigs.SASL_MECHANISM, "SCRAM-SHA-512");
         properties.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"" + username + "\" password=\"" + password + "\";");
